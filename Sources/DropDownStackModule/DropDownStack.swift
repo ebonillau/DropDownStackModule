@@ -25,10 +25,10 @@ public struct DropDownStack: View {
         VStack(alignment: .leading, spacing: 20) {
             ForEach($dropDownItems, id: \.self) { item in
                 VStack(alignment: .leading, spacing: 20) {
+                    Divider()
                     DropDownSection(dropDownItem: item,
                                     selectedScheduleItem: $selectedScheduleItem,
                                     selectedDropDownItem: $selectedDropDownItem)
-                    Divider()
                 }
             }
             Spacer(minLength: 0)
